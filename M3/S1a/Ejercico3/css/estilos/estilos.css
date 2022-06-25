@@ -1,0 +1,39 @@
+/*selectres por tag*/
+h1{
+    font-size: 40px;
+    color: red;
+}
+
+p{
+    color: blue;
+}
+
+img{
+    background-color: red;
+}
+
+/*selectores por clase */
+.ladrillo{
+    background-color: green;
+}
+.reloj{
+    background-color: blue;
+    border-radius: 50%;
+}
+
+/**selectores de identificador (ID)**/
+#cabecera{
+    color: blue;
+}
+
+#grandote{
+    font-size: 100px;
+}
+
+/*Seudoclases*/
+img:hover{
+    border-radius: 100%;
+    width: 40%;
+}
+
+

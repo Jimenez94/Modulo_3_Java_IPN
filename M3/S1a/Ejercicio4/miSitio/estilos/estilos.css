@@ -1,0 +1,21 @@
+body{
+    background-color:#EBE5E6;
+    margin 0;
+}
+
+.contenedor-top{
+    background-color: rgb(197, 224, 207);
+    
+}
+
+.contenedor-med{
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    
+}
+.contenedor-bottom{
+    background-color: yellow;
+    width: 200px;
+    height: 200px;   
+}

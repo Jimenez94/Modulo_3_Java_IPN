@@ -1,0 +1,47 @@
+/*
+Selectores de tag's
+*/
+
+h1 {
+    font-size: 40px;
+    color: red;
+}
+
+img{
+    background-color: red;
+}
+
+p {
+    color: blue;
+}
+
+img:hover{
+    border-radius: 100%;
+}
+
+p:hover{
+    border-radius: 100%;
+}
+
+/*Selectores de clase*/
+.reloj{
+    background-color: blue;
+}
+
+.chinitos{
+    background-color: rgb(126, 147, 179);
+}
+
+.circular{
+    border-radius:50%;
+}
+
+/*Selectores de ID*/
+
+#cabecera{
+    color: blue;
+}
+
+#grandote{
+    font-size: 100px;
+}

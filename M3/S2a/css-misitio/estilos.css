@@ -1,0 +1,21 @@
+body{
+    background-color: #85C1E9;
+}
+
+
+.contenedor-top{
+    background-color: blue;
+    width: 200px;
+    height: 200px
+}
+.contenedor-med{
+    background-color: red;
+    width: 200px;
+    height: 200px
+    margin-left 200;
+}
+.contenedor-bottom{
+    background-color: yellow;
+    width: 200px;
+    height: 200px
+}

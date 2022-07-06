@@ -1,17 +1,205 @@
 <!DOCTYPE html>
-<html >
-<head>
-    <meta charset="UTF-8">
-    <title>Isael Jimenez Sandoval</title>
-    <link rel="stylesheet" href="css-misitio/estilos.css"/>
-    <link rel="icon" href="favicon.ico">
-</head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css-misitio/estilos.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Mi Sitio Web</h1>
+      <img class="imagenIsael" width="10%" src="isael.png" alt="isael" />
+    </div>
 
-<body>
-    
-    <div class="contenedor-top"></div>
-    <div class="contenedor-med"></div>
-    <div class="contenedor-bottom"></div>
+    <div class="topnav">
+      <a href="https://www.facebook.com/">Facebook</a>
+      <a href="https://www.linkedin.com/">linkedin</a>
+      <a href="https://twitter.com/?lang=es">twitter</a>
+      <a href="https://github.com/" style="float: right">GitHub</a>
+    </div>
 
-</body>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2>¿De dónde viene?</h2>
+          <h5>Title description, Dec 7, 2017</h5>
+          <div class="fakeimg" style="height: 200px">
+            <p>
+              Al contrario del pensamiento popular, el texto de Lorem Ipsum no
+              es simplemente texto aleatorio. Tiene sus raices en una pieza
+              cl´sica de la literatura del Latin, que data del año 45 antes de
+              Cristo, haciendo que este adquiera mas de 2000 años de antiguedad.
+              Richard McClintock, un profesor de Latin de la Universidad de
+              Hampden-Sydney en Virginia, encontró una de las palabras más
+              oscuras de la lengua del latín, "consecteur", en un pasaje de
+              Lorem Ipsum, y al seguir leyendo distintos textos del latín,
+              descubrió la fuente indudable. Lorem Ipsum viene de las secciones
+              1.10.32 y 1.10.33 de "de Finnibus Bonorum et Malorum" (Los
+              Extremos del Bien y El Mal) por Cicero, escrito en el año 45 antes
+              de Cristo. Este libro es un tratado de teoría de éticas, muy
+              popular durante el Renacimiento. La primera linea del Lorem Ipsum,
+              "Lorem ipsum dolor sit amet..", viene de una linea en la sección
+              1.10.32
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <h2>¿Por qué lo usamos?</h2>
+          <h5>Title description, Sep 2, 2017</h5>
+          <div class="fakeimg" style="height: 200px">
+            <p>
+              Es un hecho establecido hace demasiado tiempo que un lector se
+              distraerá con el contenido del texto de un sitio mientras que mira
+              su diseño. El punto de usar Lorem Ipsum es que tiene una
+              distribución más o menos normal de las letras, al contrario de
+              usar textos como por ejemplo "Contenido aquí, contenido aquí".
+              Estos textos hacen parecerlo un español que se puede leer. Muchos
+              paquetes de autoedición y editores de páginas web usan el Lorem
+              Ipsum como su texto por defecto, y al hacer una búsqueda de "Lorem
+              Ipsum" va a dar por resultado muchos sitios web que usan este
+              texto si se encuentran en estado de desarrollo. Muchas versiones
+              han evolucionado a través de los años, algunas veces por
+              accidente, otras veces a propósito (por ejemplo insertándole humor
+              y cosas por el estilo).
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <h2>Imagenes</h2>
+          <div class="fakeimg" style="height: 240px">
+            <img
+              class="galeria"
+              src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            />
+            <img
+              class="galeria"
+              src="https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            />
+            <img
+              class="galeria"
+              src="https://images.pexels.com/photos/777001/pexels-photo-777001.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            />
+            <img
+              class="galeria"
+              src="https://images.pexels.com/photos/5499551/pexels-photo-5499551.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            />
+          </div>
+        </div>
+        <div class="container">
+          <form action="/action_page.php">
+            <div class="row">
+              <div class="col-25">
+                <label for="fname">Nombre</label>
+              </div>
+              <div class="col-75">
+                <input
+                  type="text"
+                  id="fname"
+                  name="firstname"
+                  placeholder="Ingresa tu Nombre."
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="lname">Apellido</label>
+              </div>
+              <div class="col-75">
+                <input
+                  type="text"
+                  id="lname"
+                  name="lastname"
+                  placeholder="Ingresa tu Apellido."
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="country">Pais</label>
+              </div>
+              <div class="col-75">
+                <select id="country" name="country">
+                  <option value="mexico">México</option>
+                  <option value="australia">Australia</option>
+                  <option value="canada">Canada</option>
+                  <option value="usa">USA</option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="texto">Texto</label>
+              </div>
+              <div class="col-75">
+                <textarea
+                  id="subject"
+                  name="subject"
+                  placeholder="Escribe el mensaje"
+                  style="height: 200px"
+                ></textarea>
+              </div>
+            </div>
+            <br />
+            <div class="row">
+              <input type="submit" value="Enviar" />
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="card">
+          <h2>Acerca de mi</h2>
+          <div class="fakeimg" style="height: 600px">
+            <p>
+              Lorem Ipsum es simplemente el texto de relleno de las imprentas y
+              archivos de texto. Lorem Ipsum ha sido el texto de relleno
+              estándar de las industrias desde el año 1500, cuando un impresor
+              (N. del T. persona que se dedica a la imprenta) desconocido usó
+              una galería de textos y los mezcló de tal manera que logró hacer
+              un libro de textos especimen. No sólo sobrevivió 500 años, sino
+              que tambien ingresó como texto de relleno en documentos
+              electrónicos, quedando esencialmente igual al original. Fue
+              popularizado en los 60s con la reación de las hojas "Letraset",
+              las cuales contenian pasajes de Lorem Ipsum, y más recientemente
+              con software de autoedición, como por ejemplo Aldus PageMaker, el
+              cual incluye versiones de Lorem Ipsum.
+            </p>
+          </div>
+          <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+        </div>
+        <div class="card">
+          <h3>Popular Post</h3>
+          <div class="fakeimg"><p>Image</p></div>
+          <div class="fakeimg"><p>Image</p></div>
+          <div class="fakeimg"><p>Image</p></div>
+        </div>
+        <div class="card">
+          <h3>Follow Me</h3>
+          <p>Some text..</p>
+          <div class="fakeimg"><p>Image</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <img
+        class="foter"
+        src="https://cdn-icons-png.flaticon.com/512/174/174854.png"
+      />
+      <img
+        class="foter"
+        src="https://cdn-icons.flaticon.com/png/512/2504/premium/2504903.png?token=exp=1657142968~hmac=bad92bc18cb7656a9c4364616b7b71eb"
+      />
+      <img
+        class="foter"
+        src="https://cdn-icons-png.flaticon.com/512/7726/7726139.png"
+      />
+      <img
+        class="foter"
+        src="https://cdn-icons-png.flaticon.com/512/2111/2111763.png"
+      />
+    </div>
+  </body>
 </html>

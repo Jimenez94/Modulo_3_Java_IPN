@@ -1,21 +1,195 @@
-body{
-    background-color: #85C1E9;
+.imagenIsael{
+     /* cambia estos dos valores para definir el tamaño de tu círculo */
+     height: 200px;
+     width: 200px;
+     /* los siguientes valores son independientes del tamaño del círculo */
+     background-repeat: no-repeat;
+     background-position: 50%;
+     border-radius: 50%;
+}
+.foter{
+
+    /* cambia estos dos valores para definir el tamaño de tu círculo */
+    height: 50px;
+    width: 50px;
+}
+.aboutMe{
+    height: 00px;
+    width: 10px;
 }
 
 
-.contenedor-top{
-    background-color: blue;
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial;
+    padding: 10px;
+    background: #f1f1f1;
+    background-color: 	#ededf2;
+  }
+  
+  /* Header/Blog Title */
+  .header {
+    padding: 30px;
+    text-align: center;
+    background: #cfd5e1;
+  }
+  
+  .header h1 {
+    font-size: 50px;
+  }
+  
+  /* Style the top navigation bar */
+  .topnav {
+    overflow: hidden;
+    background-color: #6c788e;
+  }
+  
+  /* Style the topnav links */
+  .topnav a {
+    float: left;
+    display: block;
+    color: #fff7f7;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change color on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: rgb(179, 121, 121);
+  }
+  
+  /* Create two unequal columns that floats next to each other */
+  /* Left column */
+  .leftcolumn {   
+    float: left;
+    width: 75%;
+  }
+  
+  /* Right column */
+  .rightcolumn {
+    float: right;
+    width: 25%;
+    background-color: #cfd5e1#8a6767;
+    padding-left: 20px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  /* Fake image */
+  .fakeimg {
+    background-color:  #6c788e;
+    width: 100%;
+    padding: 20px;
+    
+  }
+  .galeria{
+    height: 200px;
     width: 200px;
-    height: 200px
-}
-.contenedor-med{
-    background-color: red;
-    width: 200px;
-    height: 200px
-    margin-left 200;
-}
-.contenedor-bottom{
-    background-color: yellow;
-    width: 200px;
-    height: 200px
-}
+  }
+  
+  /* Add a card effect for articles */
+  .card {
+    background-color: #cfd5e1;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: #a6aec1;
+    margin-top: 20px;
+  }
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+      width: 100%;
+      padding: 0;
+    }
+  }
+  
+  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+  @media screen and (max-width: 400px) {
+    .topnav a {
+      float: none;
+      width: 100%;
+    }
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }

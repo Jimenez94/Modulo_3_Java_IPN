@@ -10,9 +10,9 @@
 <body>
     <h2>Hola mundo en un JSP</h2>
     <%if(cal.get(Calendar.AM_PM)==Calendar.AM){%>
-        Buenos dias
+        <p style="color: blue">Buenos dias</p>
     <%} else {%>
-        Buenas tardes
+        <p style="color: chocolate"> Buenas tardes</p>
     <%}%>
     <% out.println("Tu diereccion IP es: "+ request.getRemoteAddr()); %>
     <br/>

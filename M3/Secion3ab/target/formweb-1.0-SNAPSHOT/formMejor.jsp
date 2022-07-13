@@ -1,7 +1,8 @@
 <%@ page contentType="text" pageEncoding="UTF-8" %>
 <%@ page import="java.util.List" %>
+<%@ page import="java.util.Map" %>
 <%
-    List<String> errores = (List<String>) request.getAttribute("errores");
+    Map<String, String> errores = (Map<String, String>) request.getAttribute("errores");
 %>
 
 <!DOCTYPE html>
@@ -15,18 +16,22 @@
         <%if (errores != null && errores.size() > 0) {%>
 
         <ul>
-            <% for (String error : errores) {%>
+            <% for (String error : errores.values()) {%>
             <li><%=error%></li>
 
 
             <%}%>
         </ul>
         <%}%>
-        <form action="./valida" method="post">
+        <form action="./validaSegundoServlet" method="post">
             <div>
                 <label for="username">Usuario</label>
                 <div>
                     <input id="username" type="text" name="username"/>
+                    <%
+                        if (errores!= null && errores.containsKey("username"))
+                            out.println("<h5 style = 'color:red;'>"+errores.get("username")+"</h5>");
+                    %>
                 </div>
             </div>
             <div>
@@ -34,12 +39,20 @@
                 <div>
                     <input id="password" type="password" name="password"/>
                 </div>
+                <%
+                    if (errores!= null && errores.containsKey("password"))
+                        out.println("<h5 style = 'color:red;'>"+errores.get("password")+"</h5>");
+                %>
             </div>
             <div>
                 <label for="email">Correo</label>
                 <div>
                     <input id="email" type="text" name="email"/>
                 </div>
+                <%
+                    if (errores!= null && errores.containsKey("email"))
+                        out.println("<h5 style = 'color:red;'>"+errores.get("email")+"</h5>");
+                %>
             </div>
             <div>
                 <label for="pais">Pais:</label>
@@ -51,6 +64,10 @@
                         <option value="CN">Canada</option>
                     </select>
                 </div>
+                <%
+                    if (errores!= null && errores.containsKey("pais"))
+                        out.println("<h5 style = 'color:red;'>"+errores.get("pais")+"</h5>");
+                %>
             </div>
             <div>
                 <label for="lenguajes">lenguajes de programacion</label>
@@ -64,36 +81,48 @@
                         <option value="matlab">Matlab</option>
                     </select>
                 </div>
+                <%
+                    if (errores!= null && errores.containsKey("lenguajes"))
+                        out.println("<h5 style = 'color:red;'>"+errores.get("lenguajes")+"</h5>");
+                %>
             </div>
             <div>
                 <label>Roles:</label>
                 <div>
-                    <input type="checkbox" name="roles" value="ADMON">
+                    <input type="checkbox" name="roles" value="ADMON"/>
                     <label>Administrador</label>
                 </div>
                 <div>
-                    <input type="checkbox" name="roles" value="GENERAL">
+                    <input type="checkbox" name="roles" value="GENERAL"/>
                     <label>Usuario General</label>
                 </div>
                 <div>
-                    <input type="checkbox" name="roles" value="ANONIMO">
+                    <input type="checkbox" name="roles" value="ANONIMO"/>
                     <label>Usuario Anonimo</label>
                 </div>
+                <%
+                    if (errores!= null && errores.containsKey("roles"))
+                        out.println("<h5 style = 'color:red;'>"+errores.get("roles")+"</h5>");
+                %>
             </div>
             <div>
                 <label>Idioma:</label>
                 <div>
-                    <input type="radio" name="idioma" value="es">
+                    <input type="radio" name="idioma" value="es"/>
                     <label>Español</label>
                 </div>
                 <div>
-                    <input type="radio" name="idioma" value="en">
+                    <input type="radio" name="idioma" value="en"/>
                     <label>Ingles</label>
                 </div>
                 <div>
-                    <input type="radio" name="idioma" value="fr">
+                    <input type="radio" name="idioma" value="fr"/>
                     <label>Frances</label>
                 </div>
+                <%
+                    if (errores!= null && errores.containsKey("idioma"))
+                        out.println("<h5 style = 'color:red;'>"+errores.get("idioma")+"</h5>");
+                %>
             </div>
 
             <div>

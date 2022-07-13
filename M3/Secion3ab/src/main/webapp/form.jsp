@@ -17,9 +17,10 @@
         <ul>
             <% for (String error : errores) {%>
             <li><%=error%></li>
-        </ul>
 
-        <%}%>
+
+            <%}%>
+        </ul>
         <%}%>
         <form action="./valida" method="post">
             <div>

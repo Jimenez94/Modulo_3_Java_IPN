@@ -28,7 +28,7 @@ public class HolaMundoServlet extends HttpServlet {
         salida.println("</head >");
         salida.println("<body >");
         salida.println(" <h1 > Hola mundo desde un Servlet</h1 >");
-        for (int i = 1; i<20; i++){
+        for (int i = 1; i < 20; i++) {
             salida.println("<h3 style=\"color:red;\"> Haciendo un for</h3>");
         }
         salida.println("</body >");

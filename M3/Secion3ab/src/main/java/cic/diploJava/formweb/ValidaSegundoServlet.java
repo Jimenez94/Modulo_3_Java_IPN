@@ -8,12 +8,10 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
-@WebServlet("/valida")
-public class ValidaServlet extends HttpServlet {
+@WebServlet("/validaSegundoServlet")
+public class ValidaSegundoServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         resp.setContentType("text/html");
@@ -30,28 +28,28 @@ public class ValidaServlet extends HttpServlet {
         String soltero = req.getParameter("soltero");
         String oculto = req.getParameter("oculto");
 
-        List<String> errores = new ArrayList<>();
+        Map<String, String> errores = new HashMap<>();//permite almacenar objetos con una llave de tipo String y un valor de tipo String
 
         if (username == null || username.isBlank()) {
-            errores.add("Usuario es requerido");
+            errores.put("username","Usuario es requerido");
         }
         if (password == null || password.isBlank()) {
-            errores.add("Contraseña es requerida");
+            errores.put("password","Contraseña es requerida");
         }
         if (email == null || !email.contains("@")) {
-            errores.add("Email requerido o mal formado");
+            errores.put("","Email requerido o mal formado");
         }
         if (pais == null || email.isBlank()) {
-            errores.add("Pais es requerido");
+            errores.put("email","Pais es requerido");
         }
         if (lenguajes == null || lenguajes.length == 0) {
-            errores.add("Seleccione un lenguaje");
+            errores.put("lenguajes","Seleccione un lenguaje");
         }
         if (roles == null || roles.length == 0) {
-            errores.add("Defina su rol o roles");
+            errores.put("roles","Defina su rol o roles");
         }
         if (idioma == null) {
-            errores.add("Seleccione un idioma");
+            errores.put("idioma","Seleccione un idioma");
         }
 
         if (errores.isEmpty()) {
@@ -91,9 +89,7 @@ public class ValidaServlet extends HttpServlet {
             req.setAttribute("errores", errores);
             //regresa el control al formulario
             //Se optiene el contexto de la aplicacion y todo se va a a mandar a un contexto de se llama /from.jsp, se tiene que mandar la informacion del formulario
-            getServletContext().getRequestDispatcher("/form.jsp").forward(req, resp);
+            getServletContext().getRequestDispatcher("/formMejor.jsp").forward(req, resp);
         }
     }
 }
-
-

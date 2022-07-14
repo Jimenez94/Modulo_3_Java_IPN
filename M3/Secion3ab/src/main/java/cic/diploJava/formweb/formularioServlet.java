@@ -100,6 +100,7 @@ public class formularioServlet extends HttpServlet {
             salida.println("</ul>");
             salida.println("</body>");
             salida.println("</html>");
+
         }
     }
 }

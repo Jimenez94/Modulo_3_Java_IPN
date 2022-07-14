@@ -1,0 +1,6 @@
+cic\diplojava\webheaders\servlets\ProductosXslServlet.class
+cic\diplojava\webheaders\servicio\ProductoServiceImp.class
+cic\diplojava\webheaders\modelo\Producto.class
+cic\diplojava\webheaders\servlets\CabecerasServlet.class
+cic\diplojava\webheaders\servicio\ProductosService.class
+cic\diplojava\webheaders\servlets\ProductosJsonServlet.class

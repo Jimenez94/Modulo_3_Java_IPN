@@ -17,6 +17,7 @@ import java.util.List;
 
 @WebServlet("/productos-json")
 public class ProductosJsonServlet extends HttpServlet {
+    //se hace una peticion
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //pide el reques y regresa un json

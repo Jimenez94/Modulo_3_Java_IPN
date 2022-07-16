@@ -2,6 +2,7 @@ cic\diplojava\webcompras\servisio\ProductosService.class
 cic\diplojava\webcompras\servisio\LoginService.class
 cic\diplojava\webcompras\modelo\CarroCompras.class
 cic\diplojava\webcompras\servisio\ProductoServiceImp.class
+cic\diplojava\webcompras\filtros\ConexionFilter.class
 cic\diplojava\webcompras\listener\AplicacionListener.class
 cic\diplojava\webcompras\modelo\Producto.class
 cic\diplojava\webcompras\servisio\LoginServiceImp.class
@@ -9,5 +10,7 @@ cic\diplojava\webcompras\control\LogoutServlet.class
 cic\diplojava\webcompras\control\AgregarProductoCarroServlet.class
 cic\diplojava\webcompras\modelo\ArticuloCarro.class
 cic\diplojava\webcompras\control\LoginServlet.class
+cic\diplojava\webcompras\util\ConexionBD.class
 cic\diplojava\webcompras\control\ProductosServlet.class
+cic\diplojava\webcompras\filtros\LoginFilter.class
 cic\diplojava\webcompras\control\ContenidoCarroServlet.class

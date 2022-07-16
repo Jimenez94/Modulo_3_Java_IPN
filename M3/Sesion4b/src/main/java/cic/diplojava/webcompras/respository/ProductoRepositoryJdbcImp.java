@@ -2,10 +2,7 @@ package cic.diplojava.webcompras.respository;
 
 import cic.diplojava.webcompras.modelo.Producto;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -28,7 +25,6 @@ public class ProductoRepositoryJdbcImp implements Repository<Producto> {
                 Producto p = getProduucto(rs);
                 productos.add(p);
             }
-
         }
         return productos;
     }
@@ -36,9 +32,15 @@ public class ProductoRepositoryJdbcImp implements Repository<Producto> {
     @Override
     public Producto porId(Integer id) throws SQLException {
         Producto producto = null;
-
-        
-
+        String query = "SELECT * FROM producto AS p WHERE p.id = ?";
+        try (PreparedStatement pstm = conexion.prepareStatement(query)) {
+            pstm.setInt(1, id);
+            try (ResultSet rs = pstm.executeQuery()) {
+                if (rs.next()) {
+                    producto = getProduucto(rs);
+                }
+            }
+        }
         return producto;
     }
 

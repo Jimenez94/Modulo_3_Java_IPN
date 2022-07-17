@@ -1,10 +1,7 @@
 package cic.diplojava.webcompras.control;
 
 import cic.diplojava.webcompras.modelo.Producto;
-import cic.diplojava.webcompras.servisio.LoginService;
-import cic.diplojava.webcompras.servisio.LoginServiceImp;
-import cic.diplojava.webcompras.servisio.ProductoServiceImp;
-import cic.diplojava.webcompras.servisio.ProductosService;
+import cic.diplojava.webcompras.servisio.*;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -13,6 +10,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
 import java.util.List;
 import java.util.Optional;
 
@@ -20,14 +18,19 @@ import java.util.Optional;
 public class ProductosServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        ProductosService service = new ProductoServiceImp();
+        Connection conexion = (Connection) req.getAttribute("conexion");
+        ProductosService service = new ProductoServicejdbcImp(conexion);
         List<Producto> productos = service.listaProductos();
 
         LoginService autoriza = new LoginServiceImp();
         Optional<String> usernameOptional = autoriza.getNombreUsuario(req);
 
+        req.setAttribute("productos", productos);
+        req.setAttribute("username", usernameOptional);
 
-        resp.setContentType("text/html");
+        getServletContext().getRequestDispatcher("/listar.jsp").forward(req,resp);
+
+        /*resp.setContentType("text/html");
 
         try (PrintWriter salida = resp.getWriter()) {//try parametrizado
             salida.println("<!DOCTYPE html>");
@@ -68,6 +71,8 @@ public class ProductosServlet extends HttpServlet {
 
             salida.println("</body>");
             salida.println("</html>");
-        }
+        }*/
+
+
     }
 }

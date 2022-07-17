@@ -1,10 +1,14 @@
+cic\diplojava\webcompras\servisio\exception\ServicioJdbcException.class
 cic\diplojava\webcompras\servisio\ProductosService.class
+cic\diplojava\webcompras\servisio\ProductoServicejdbcImp.class
 cic\diplojava\webcompras\servisio\LoginService.class
 cic\diplojava\webcompras\modelo\CarroCompras.class
 cic\diplojava\webcompras\servisio\ProductoServiceImp.class
+cic\diplojava\webcompras\respository\ProductoRepositoryJdbcImp.class
 cic\diplojava\webcompras\filtros\ConexionFilter.class
 cic\diplojava\webcompras\listener\AplicacionListener.class
 cic\diplojava\webcompras\modelo\Producto.class
+cic\diplojava\webcompras\respository\Repository.class
 cic\diplojava\webcompras\servisio\LoginServiceImp.class
 cic\diplojava\webcompras\control\LogoutServlet.class
 cic\diplojava\webcompras\control\AgregarProductoCarroServlet.class

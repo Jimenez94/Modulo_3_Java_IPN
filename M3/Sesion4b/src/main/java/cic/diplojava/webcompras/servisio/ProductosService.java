@@ -9,5 +9,6 @@ import java.util.Optional;
 public interface ProductosService {
     List<Producto> listaProductos();
     Optional<Producto> buscaProducto(Integer id);
-
+    void guardar(Producto producto);
+    void eliminar(Integer id);
 }

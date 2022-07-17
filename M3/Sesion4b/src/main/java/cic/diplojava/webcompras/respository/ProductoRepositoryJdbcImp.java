@@ -46,12 +46,32 @@ public class ProductoRepositoryJdbcImp implements Repository<Producto> {
 
     @Override
     public void guardar(Producto producto) throws SQLException {
-
+        String sentencia;
+        if (producto.getId() != null && producto.getId() > 0) {
+            sentencia = "UPDATE producto set nombre=?, descripcion=?, precio=?" +
+                    "WHERE id =?";
+        } else {
+            sentencia = "INSER INTO producto (nombre,descripcion,precio) " +
+                    "VALUES (?,?,?)";
+        }
+        try (PreparedStatement pst = conexion.prepareStatement(sentencia)) {
+            pst.setString(1, producto.getNombre());
+            pst.setString(2, producto.getDescripcion());
+            pst.setFloat(3, producto.getPrecio());
+            if (producto.getId() != null && producto.getId() > 0) {
+                pst.setInt(4, producto.getId());
+            }
+            pst.executeUpdate();
+        }
     }
 
     @Override
     public void eliminar(Integer id) throws SQLException {
-
+        String sentencia = "DELETE FROM producto WHERE id = ?";
+        try (PreparedStatement pst = conexion.prepareStatement(sentencia)) {
+            pst.setInt(1, id);
+            pst.executeUpdate();
+        }
     }
 
     private Producto getProduucto(ResultSet rs) throws SQLException {

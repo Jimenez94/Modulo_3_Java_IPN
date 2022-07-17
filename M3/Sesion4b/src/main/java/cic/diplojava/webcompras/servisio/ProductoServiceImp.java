@@ -18,4 +18,14 @@ public class ProductoServiceImp implements ProductosService{
     public Optional<Producto> buscaProducto(Integer id) {
         return listaProductos().stream().filter(p -> p.getId().equals(id)).findAny();
     }
+
+    @Override
+    public void guardar(Producto producto) {
+
+    }
+
+    @Override
+    public void eliminar(Integer id) {
+
+    }
 }

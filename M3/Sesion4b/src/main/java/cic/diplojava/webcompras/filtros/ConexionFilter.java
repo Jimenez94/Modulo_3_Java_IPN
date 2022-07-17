@@ -1,5 +1,6 @@
 package cic.diplojava.webcompras.filtros;
 
+import cic.diplojava.webcompras.servisio.exception.ServicioJdbcException;
 import cic.diplojava.webcompras.util.ConexionBD;
 import jakarta.servlet.*;
 import jakarta.servlet.annotation.WebFilter;
@@ -22,7 +23,7 @@ public class ConexionFilter implements Filter {
                 servletRequest.setAttribute("conexion", conexion);
                 filterChain.doFilter(servletRequest, servletResponse);
                 conexion.commit();
-            } catch (SQLException ex) {
+            } catch (SQLException | ServicioJdbcException ex) {
                 conexion.rollback();
                 ((HttpServletResponse) servletResponse).sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, ex.getMessage());
             }
